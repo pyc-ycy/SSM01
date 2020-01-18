@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myCode.dao.UserDAO">
+    <select id="getAllUser" resultType="userBean">
+        select * from users
+    </select>
+    <select id="getUserById" resultType="userBean" parameterType="int">
+        select * from users where uId = #{uId}
+    </select>
+    <select id="updateUser" parameterType="userBean">
+        update users set uName=#{uName},uAge=#{uAge} where uId=#{uId}
+    </select>
+    <delete id="delUser" parameterType="int">
+        delete from users where uId=#{uId}
+    </delete>
+</mapper>
