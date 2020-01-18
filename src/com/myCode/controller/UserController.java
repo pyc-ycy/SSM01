@@ -9,7 +9,6 @@ package com.myCode.controller;
 
 
 import com.myCode.bean.UserBean;
-import com.myCode.dao.UserDAO;
 import com.myCode.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ import java.util.List;
 @RequestMapping("userController")
 public class UserController {
     @Autowired
-    UserDAO userDao;
+    UserService userDao;
 
     @RequestMapping("/getAllUser")
     public ModelAndView getAllUser() {
