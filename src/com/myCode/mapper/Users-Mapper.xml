@@ -3,15 +3,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.myCode.dao.UserDAO">
     <select id="getAllUser" resultType="userBean">
-        select * from users
+        select * from agent
     </select>
     <select id="getUserById" resultType="userBean" parameterType="int">
-        select * from users where uId = #{uId}
+        select * from agent where ID = #{ID}
     </select>
     <select id="updateUser" parameterType="userBean">
-        update users set uName=#{uName},uAge=#{uAge} where uId=#{uId}
+        update agent set name=#{name},age=#{age} where ID=#{ID}
     </select>
     <delete id="delUser" parameterType="int">
-        delete from users where uId=#{uId}
+        delete from agent where ID=#{ID}
     </delete>
+    <select id="checkUser" parameterType="String">
+        select password from agent where acount=#{account}
+    </select>
 </mapper>

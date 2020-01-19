@@ -23,13 +23,13 @@ public class UserServiceImpl implements UserService{
     public List<UserBean> getAllUser(){
         return userDAO.getAllUser();
     }
-    public List<UserBean> getUserById(int uId){
-        return userDAO.getUserById(uId);
+    public List<UserBean> getUserById(int ID){
+        return userDAO.getUserById(ID);
     }
     public void updateUser(UserBean userBean){
         userDAO.updateUser(userBean);
     }
-    public void delUser(int uId){
-        userDAO.delUser(uId);
+    public void delUser(int ID){
+        userDAO.delUser(ID);
     }
 }

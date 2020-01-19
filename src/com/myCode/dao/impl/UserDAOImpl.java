@@ -25,15 +25,20 @@ public class UserDAOImpl extends BaseDaoImpl<UserDAO> implements UserDAO {
         return this.getMapper().getAllUser();
     }
     @Override
-    public List<UserBean> getUserById(int id){
-        return this.getMapper().getUserById(id);
+    public List<UserBean> getUserById(int ID){
+        return this.getMapper().getUserById(ID);
     }
     @Override
     public void updateUser(UserBean userBean){
         this.getMapper().updateUser(userBean);
     }
     @Override
-    public void delUser(int id){
-        this.getMapper().delUser(id);
+    public void delUser(int ID){
+        this.getMapper().delUser(ID);
+    }
+
+    @Override
+    public void checkUser(String account) {
+        this.getMapper().checkUser(account);
     }
 }

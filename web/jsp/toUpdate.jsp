@@ -18,15 +18,15 @@
             <tr>
                 <Td>
                     序号：<label>
-                    <input type="text" name="uId" value="${list.uId }" disabled="disabled"/>
+                    <input type="text" name="ID" value="${list.ID }" disabled="disabled"/>
                 </label>
-                    <input type="hidden" name="uId" value="${list.uId }"/>
+                    <input type="hidden" name="ID" value="${list.ID }"/>
                 </Td>
             </tr>
             <tr>
                 <td>
                     姓名：<label>
-                    <input type="text" name="uName" value="${list.uName }"/>
+                    <input type="text" name="name" value="${list.name }"/>
                 </label>
 
                 </td>
@@ -34,7 +34,7 @@
             <tr>
                 <Td>
                     年龄：<label>
-                    <input type="text" name="uAge" value="${list.uAge }"/>
+                    <input type="text" name="age" value="${list.age }"/>
                 </label>
                 </Td>
             </tr>

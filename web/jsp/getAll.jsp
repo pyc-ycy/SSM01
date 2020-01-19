@@ -30,16 +30,16 @@
     <c:forEach items="${listUser}" var ="list">
         <tr>
             <td>
-                    ${list.uId }
+                    ${list.ID }
             </td>
             <td>
-                    ${list.uName }
+                    ${list.name }
             </td>
             <td>
-                    ${list.uAge }
+                    ${list.age }
             </td>
             <td>
-                <input type="button" value="修改" onclick="toUpdate(${list.uId})"/>
+                <input type="button" value="修改" onclick="toUpdate(${list.ID})"/>
             </td>
         </tr>
     </c:forEach>
@@ -49,6 +49,6 @@
 <script>
     function toUpdate(id){
 
-        location.href="getUserById?uId="+id;
+        location.href="getUserById?ID="+id;
     }
 </script>

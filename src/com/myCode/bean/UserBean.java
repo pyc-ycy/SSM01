@@ -13,49 +13,67 @@ import org.springframework.stereotype.Component;
 @Alias("userBean")
 @Component
 public class UserBean {
-    private int uId;
-    private String uName;
-    private int uAge;
-    private String uAddress;
-    private String uTel;
+    private int ID;
+    private String name;
+    private int age;
+    private String account;
+    private String tel;
+    private String password;
+    private String status;
 
-    public void setuName(String uName) {
-        this.uName = uName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getuName() {
-        return uName;
+    public String getName() {
+        return name;
     }
 
-    public void setuId(int uId) {
-        this.uId = uId;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public int getuId() {
-        return uId;
+    public int getID() {
+        return ID;
     }
 
-    public void setuAge(int uAge) {
-        this.uAge = uAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getuAge() {
-        return uAge;
+    public int getAge() {
+        return age;
     }
 
-    public void setuAddress(String uAddress) {
-        this.uAddress = uAddress;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public String getuAddress() {
-        return uAddress;
+    public String getAccount() {
+        return account;
     }
 
-    public void setuTel(String uTel) {
-        this.uTel = uTel;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
-    public String getuTel() {
-        return uTel;
+    public String getTel() {
+        return tel;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }

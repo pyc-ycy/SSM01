@@ -37,9 +37,9 @@ public class UserController {
     }
 
     @RequestMapping("/getUserById")
-    public ModelAndView getUserById(@Param("uId")Integer uId) {
+    public ModelAndView getUserById(@Param("ID")Integer ID) {
         ModelAndView mav = new ModelAndView("toUpdate");
-        List<UserBean> list = userDao.getUserById(uId);
+        List<UserBean> list = userDao.getUserById(ID);
         mav.addObject("list", list);
         return mav;
 
@@ -52,8 +52,12 @@ public class UserController {
 
     }
 
-    public String delUser(@Param("uId")Integer uId) {
-        userDao.delUser(uId);
+    public String delUser(@Param("ID")Integer ID) {
+        userDao.delUser(ID);
         return "forward:getAllUser";
+    }
+    @RequestMapping("/login")
+    public ModelAndView toLogin(){
+        return new ModelAndView("login");
     }
 }
