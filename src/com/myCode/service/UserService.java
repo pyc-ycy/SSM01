@@ -21,4 +21,7 @@ public interface UserService {
     public void updateUser(UserBean userBean);
     // 删除方法
     public void delUser(int ID);
+    public String checkUser(String account);
+    public void updateStatus(String  account);
+    public void userExit(String account);
 }

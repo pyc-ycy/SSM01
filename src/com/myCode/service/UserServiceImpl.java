@@ -32,4 +32,19 @@ public class UserServiceImpl implements UserService{
     public void delUser(int ID){
         userDAO.delUser(ID);
     }
+
+    @Override
+    public String checkUser(String account) {
+        return userDAO.checkUser(account);
+    }
+
+    @Override
+    public void updateStatus(String account) {
+        userDAO.updateStatus(account);
+    }
+
+    @Override
+    public void userExit(String account) {
+        userDAO.userExit(account);
+    }
 }

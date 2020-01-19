@@ -38,7 +38,17 @@ public class UserDAOImpl extends BaseDaoImpl<UserDAO> implements UserDAO {
     }
 
     @Override
-    public void checkUser(String account) {
-        this.getMapper().checkUser(account);
+    public String checkUser(String account) {
+        return this.getMapper().checkUser(account);
+    }
+
+    @Override
+    public void updateStatus(String account) {
+        this.getMapper().updateStatus(account);
+    }
+
+    @Override
+    public void userExit(String account) {
+        this.getMapper().userExit(account);
     }
 }

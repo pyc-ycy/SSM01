@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>用户登录于注册</title>
+    <title>用户登录与注册</title>
     <style type="text/css">
         .b{
             height:100px;
@@ -121,11 +121,11 @@
                 <div class="xm_login_card_tab">
                     <div id="loginCard" class="xm_login_card_tab_item">登录与注册</div>
                 </div>
-                <form name="form1" method="post" action="" onsubmit="return checkAgentPassword(form1.agent,form1.password)">
+                <form name="form1" method="post" action="${pageContext.request.contextPath}/userController/checkUser" onsubmit="return checkAgentPassword(form1.agent,form1.password)">
                     <table width="85%" border="0">
                         <tr>
-                            <td width="36%" height="50px"><label for="agent">账号：</label></td>
-                            <td width="64%" height="50px"><input name="agent" type="text" id="agent" style="width: 120px"></td>
+                            <td width="36%" height="50px"><label for="account">账号：</label></td>
+                            <td width="64%" height="50px"><input name="account" type="text" id="account" style="width: 120px"></td>
                         </tr>
                         <tr>
                             <td width="36%" height="50px"><label for="password">密码：</label></td>
@@ -152,5 +152,10 @@
 <div class="b">
     <%@include file="copyright.jsp"%>
 </div>
+<script type="javascript">
+    function toFirst(account,password) {
+        location.href="checkUser?account="+account+"&password="+password;
+    }
+</script>
 </body>
 </html>

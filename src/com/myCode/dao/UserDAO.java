@@ -22,5 +22,9 @@ public interface UserDAO {
     // 删除方法
     public void delUser(int ID);
     //检查用户密码
-    public void checkUser(String account);
+    public String checkUser(String account);
+    //更新用户状态
+    public void updateStatus(String account);
+    //用户退出
+    public void userExit(String account);
 }

@@ -14,7 +14,13 @@
     <delete id="delUser" parameterType="int">
         delete from agent where ID=#{ID}
     </delete>
-    <select id="checkUser" parameterType="String">
+    <select id="checkUser" parameterType="String" resultType="String">
         select password from agent where acount=#{account}
     </select>
+    <update id="updateStatus" parameterType="String">
+        update agent set status='1' where acount=#{account}
+    </update>
+    <update id="userExit" parameterType="String">
+        update agent set status='0' where acount=#{account}
+    </update>
 </mapper>

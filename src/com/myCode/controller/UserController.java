@@ -13,9 +13,14 @@ import com.myCode.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -58,6 +63,51 @@ public class UserController {
     }
     @RequestMapping("/login")
     public ModelAndView toLogin(){
+        return new ModelAndView("login");
+    }
+    @RequestMapping(value = "/checkUser",method = RequestMethod.POST)
+    public ModelAndView checkUser(HttpSession session,
+                                  @Param("form1.account")String account,
+                                  @Param("form1.password")String password){
+        String temp = userDao.checkUser(account);
+        if(password.equals(temp))
+        {
+            userDao.updateStatus(account);
+            ModelAndView mav = new ModelAndView("first");
+            mav.addObject("account", account);
+            session.setAttribute("currentAccount",account);
+            return mav;
+        }
+        ModelAndView mav = new ModelAndView("error");
+        mav.addObject("account", account);
+        mav.addObject("password", password);
+        mav.addObject("temp",temp);
+        return mav;
+    }
+    @RequestMapping("/first")
+    public ModelAndView first(){
+        return new ModelAndView("first");
+    }
+    @RequestMapping(value = "/lawyerIntroduce")
+    public ModelAndView lawyerIntroduce(){
+        return new ModelAndView("LawyerIntroduce");
+    }
+    @RequestMapping("/documentList")
+    public ModelAndView documentList(){
+        return new ModelAndView("DocumentList");
+    }
+    @RequestMapping("/consume")
+    public ModelAndView consume(){
+        return new ModelAndView("Consume");
+    }
+    @RequestMapping("/userPage")
+    public ModelAndView userPage(){
+        return new ModelAndView("UserPage");
+    }
+    @RequestMapping("/userExit")
+    public ModelAndView userExit(HttpSession session){
+        String account = (String) session.getAttribute("currentAccount");
+        this.userDao.userExit(account);
         return new ModelAndView("login");
     }
 }
