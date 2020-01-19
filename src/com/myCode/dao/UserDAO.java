@@ -30,4 +30,5 @@ public interface UserDAO {
     //用户注册
     public void addUser(UserBean userBean);
     public List<UserBean> getUserByAccount(String account);
+    public void changePassword(UserBean userBean);
 }

@@ -57,4 +57,9 @@ public class UserServiceImpl implements UserService{
     public List<UserBean> getUserByAccount(String account) {
         return userDAO.getUserByAccount(account);
     }
+
+    @Override
+    public void changePassword(UserBean userBean) {
+        userDAO.changePassword(userBean);
+    }
 }

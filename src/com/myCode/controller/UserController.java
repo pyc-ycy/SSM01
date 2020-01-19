@@ -146,5 +146,28 @@ public class UserController {
     public ModelAndView toBook(){
         return new ModelAndView("book");
     }
-
+    @RequestMapping("/toChangePassword")
+    public ModelAndView toChangePassword(){
+        return new ModelAndView("ChangePassword");
+    }
+    @RequestMapping("/changePassword")
+    public ModelAndView changePassword(HttpSession session,
+                                 @Param("form.password")String password,
+                                 @Param("form.oldpassword")String oldpassword){
+        String account = (String) session.getAttribute("currentAccount");
+        String temp = userDao.checkUser(account);
+        if(oldpassword.equals(temp)){
+            UserBean userBean = new UserBean();
+            userBean.setAccount(account);
+            userBean.setPassword(password);
+            userDao.changePassword(userBean);
+            userDao.userExit(account);
+            return new ModelAndView("login");
+        }
+        else{
+            ModelAndView mav = new ModelAndView("error");
+            mav.addObject("message","旧密码错误，更改失败");
+            return mav;
+        }
+    }
 }

@@ -81,7 +81,7 @@
                             <input  type="submit" value="确认信息">
                         </td>
                         <td>
-                            <input type="button" value="修改密码">
+                            <input type="button" value="修改密码" onclick="window.location.href='toChangePassword'">
                         </td>
                     </tr>
                 </table>

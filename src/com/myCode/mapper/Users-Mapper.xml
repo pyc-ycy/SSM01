@@ -29,4 +29,7 @@
     <select id="getUserByAccount" parameterType="String" resultType="UserBean">
         select * from agent where acount=#{account}
     </select>
+    <update id="changePassword" parameterType="UserBean">
+        update agent set password=#{password} where acount=#{account}
+    </update>
 </mapper>

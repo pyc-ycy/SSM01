@@ -26,4 +26,5 @@ public interface UserService {
     public void userExit(String account);
     public void addUser(UserBean userBean);
     public List<UserBean> getUserByAccount(String account);
+    public void changePassword(UserBean userBean);
 }

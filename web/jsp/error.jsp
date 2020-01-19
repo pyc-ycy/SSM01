@@ -13,9 +13,7 @@
 <body>
 <center>
     <h1>
-        account:${account}<br>
-        password:${password}<br>
-        temp:${temp}
+        ${message}
     </h1>
 </center>
 </body>
