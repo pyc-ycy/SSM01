@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>用户</title>
@@ -36,9 +37,58 @@
             </ul>
         </div>
     </div>
-    <h1>
 
-    </h1>
+    <center>
+        <form name="form" method="post" action="${pageContext.request.contextPath}/userController/updateUser">
+            <c:forEach items="${list}" var="list">
+                <table border="0">
+                    <caption>用户信息</caption>
+                    <tr>
+                        <td ><label for="name">姓名：</label> </td>
+                        <td ><input  type="text" id="name" name="name" value="${list.name}"></td>
+                    </tr>
+                    <tr>
+                        <td ><label for="sex">性别：</label> </td>
+                        <td ><input  type="text" id="sex" name="sex" value="${list.sex}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">年龄：</label> </td>
+                        <td><input type="text" name="age" id="age" value="${list.age}"></td>
+                    </tr>
+                    <tr >
+                        <td ><label for="tel">联系方式：</label> </td>
+                        <td ><input  type="text" id="tel" name="tel" value="${list.tel}"></td>
+                    </tr>
+                    <tr >
+                        <td ><label for="account">账号名：</label> </td>
+                        <td ><input  type="text" name="account" id="account" value="${sessionScope.currentAccount}" disabled="disabled"></td>
+                    </tr>
+                    <tr >
+                        <td><label for="password">密码：</label> </td>
+                        <td><input  type="text" name="password" id="password" value="${list.password}" disabled="disabled"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input  type="submit" value="确认信息">
+                        </td>
+                        <td>
+                            <input type="button" value="修改密码">
+                        </td>
+                    </tr>
+                </table>
+            </c:forEach>
+
+        </form>
+    </center>
     <form method="post" action="${pageContext.request.contextPath}/userController/userExit">
         <input type="submit" value="退出登录">
     </form>

@@ -52,4 +52,9 @@ public class UserServiceImpl implements UserService{
     public void addUser(UserBean userBean) {
         userDAO.addUser(userBean);
     }
+
+    @Override
+    public List<UserBean> getUserByAccount(String account) {
+        return userDAO.getUserByAccount(account);
+    }
 }

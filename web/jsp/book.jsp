@@ -45,7 +45,7 @@
     <form name="form" method="post" action="${pageContext.request.contextPath}/userController/addUser" onsubmit="return checkPWD(form.password,form.password1)">
         <table border="0">
             <caption>用户信息</caption>
-            <tr style="height: 20%">
+            <tr>
                 <td ><label for="name">姓名：</label> </td>
                 <td ><input  type="text" id="name" name="name"></td>
             </tr>

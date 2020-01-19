@@ -25,4 +25,5 @@ public interface UserService {
     public void updateStatus(String  account);
     public void userExit(String account);
     public void addUser(UserBean userBean);
+    public List<UserBean> getUserByAccount(String account);
 }

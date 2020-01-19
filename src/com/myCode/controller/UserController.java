@@ -12,6 +12,7 @@ import com.myCode.bean.UserBean;
 import com.myCode.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -48,9 +49,22 @@ public class UserController {
     }
 
     @RequestMapping("/updateUser")
-    public String toUpdate(UserBean usersBean){
-        userDao.updateUser(usersBean);
-        return "forward:getAllUser";
+    public String toUpdate(HttpSession session,
+                           @Param("age")Integer age,
+                           @Param("name")String name,
+                           @Param("tel")String tel,
+                           @Param("sex")String sex,
+                           @Param("password")String password){
+        String account = (String) session.getAttribute("currentAccount");
+        UserBean userBean = new UserBean();
+        userBean.setAccount(account);
+        userBean.setAge(age);
+        userBean.setName(name);
+        userBean.setTel(tel);
+        userBean.setPassword(password);
+        userBean.setSex(sex);
+        userDao.updateUser(userBean);
+        return "forward:userPage";
 
     }
 
@@ -98,8 +112,12 @@ public class UserController {
         return new ModelAndView("Consume");
     }
     @RequestMapping("/userPage")
-    public ModelAndView userPage(){
-        return new ModelAndView("UserPage");
+    public ModelAndView userPage(HttpSession session){
+        String account = (String) session.getAttribute("currentAccount");
+        List<UserBean> list = userDao.getUserByAccount(account);
+        ModelAndView mav = new ModelAndView("UserPage");
+        mav.addObject("list", list);
+        return mav;
     }
     @RequestMapping("/userExit")
     public ModelAndView userExit(HttpSession session){
@@ -128,4 +146,5 @@ public class UserController {
     public ModelAndView toBook(){
         return new ModelAndView("book");
     }
+
 }

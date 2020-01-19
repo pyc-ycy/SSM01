@@ -8,9 +8,9 @@
     <select id="getUserById" resultType="userBean" parameterType="int">
         select * from agent where ID = #{ID}
     </select>
-    <select id="updateUser" parameterType="userBean">
-        update agent set name=#{name},age=#{age} where ID=#{ID}
-    </select>
+    <update id="updateUser" parameterType="userBean">
+        update agent set name=#{name},age=#{age},sex=#{sex},tel=#{tel} where acount=#{account}
+    </update>
     <delete id="delUser" parameterType="int">
         delete from agent where ID=#{ID}
     </delete>
@@ -26,4 +26,7 @@
     <insert id="addUser" parameterType="UserBean">
         insert into agent(name,age,sex,tel,acount,password) values(#{name},#{age},#{sex},#{tel},#{account},#{password})
     </insert>
+    <select id="getUserByAccount" parameterType="String" resultType="UserBean">
+        select * from agent where acount=#{account}
+    </select>
 </mapper>

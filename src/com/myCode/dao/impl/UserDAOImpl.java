@@ -56,4 +56,9 @@ public class UserDAOImpl extends BaseDaoImpl<UserDAO> implements UserDAO {
     public void addUser(UserBean userBean) {
         this.getMapper().addUser(userBean);
     }
+
+    @Override
+    public List<UserBean> getUserByAccount(String account) {
+        return this.getMapper().getUserByAccount(account);
+    }
 }

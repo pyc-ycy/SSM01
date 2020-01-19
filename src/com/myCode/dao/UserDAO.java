@@ -29,4 +29,5 @@ public interface UserDAO {
     public void userExit(String account);
     //用户注册
     public void addUser(UserBean userBean);
+    public List<UserBean> getUserByAccount(String account);
 }
