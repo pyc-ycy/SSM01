@@ -23,4 +23,7 @@
     <update id="userExit" parameterType="String">
         update agent set status='0' where acount=#{account}
     </update>
+    <insert id="addUser" parameterType="UserBean">
+        insert into agent(name,age,sex,tel,acount,password) values(#{name},#{age},#{sex},#{tel},#{account},#{password})
+    </insert>
 </mapper>

@@ -133,7 +133,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">&nbsp;<input type="submit" width="50px" name="submit" value="确认"></td>
-                            <td><input type="button" style="width: 50px" value="注册" onclick="window.location.href='UserLogin.jsp'"></td>
+                            <td><input type="button" value="注册" onclick="window.location.href='toBook'"></td>
                         </tr>
                     </table>
                 </form>
@@ -155,6 +155,9 @@
 <script type="javascript">
     function toFirst(account,password) {
         location.href="checkUser?account="+account+"&password="+password;
+    }
+    function toBook() {
+        location.href="book.jsp";
     }
 </script>
 </body>

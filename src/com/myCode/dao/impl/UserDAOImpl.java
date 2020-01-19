@@ -51,4 +51,9 @@ public class UserDAOImpl extends BaseDaoImpl<UserDAO> implements UserDAO {
     public void userExit(String account) {
         this.getMapper().userExit(account);
     }
+
+    @Override
+    public void addUser(UserBean userBean) {
+        this.getMapper().addUser(userBean);
+    }
 }

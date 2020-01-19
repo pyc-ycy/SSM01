@@ -24,4 +24,5 @@ public interface UserService {
     public String checkUser(String account);
     public void updateStatus(String  account);
     public void userExit(String account);
+    public void addUser(UserBean userBean);
 }

@@ -47,4 +47,9 @@ public class UserServiceImpl implements UserService{
     public void userExit(String account) {
         userDAO.userExit(account);
     }
+
+    @Override
+    public void addUser(UserBean userBean) {
+        userDAO.addUser(userBean);
+    }
 }

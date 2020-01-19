@@ -13,11 +13,8 @@ import com.myCode.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -109,5 +106,26 @@ public class UserController {
         String account = (String) session.getAttribute("currentAccount");
         this.userDao.userExit(account);
         return new ModelAndView("login");
+    }
+    @RequestMapping("/addUser")
+    public String addUser(@Param("account")String account,
+                          @Param("age")Integer age,
+                          @Param("name")String name,
+                          @Param("tel")String tel,
+                          @Param("sex")String sex,
+                          @Param("password")String password){
+        UserBean userBean = new UserBean();
+        userBean.setAccount(account);
+        userBean.setAge(age);
+        userBean.setName(name);
+        userBean.setTel(tel);
+        userBean.setPassword(password);
+        userBean.setSex(sex);
+        userDao.addUser(userBean);
+        return "forward:login";
+    }
+    @RequestMapping("/toBook")
+    public ModelAndView toBook(){
+        return new ModelAndView("book");
     }
 }

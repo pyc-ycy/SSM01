@@ -20,6 +20,7 @@ public class UserBean {
     private String tel;
     private String password;
     private String status;
+    private String sex;
 
     public void setName(String name) {
         this.name = name;
@@ -75,5 +76,13 @@ public class UserBean {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getSex() {
+        return sex;
     }
 }

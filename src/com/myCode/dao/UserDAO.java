@@ -27,4 +27,6 @@ public interface UserDAO {
     public void updateStatus(String account);
     //用户退出
     public void userExit(String account);
+    //用户注册
+    public void addUser(UserBean userBean);
 }
