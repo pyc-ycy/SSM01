@@ -19,13 +19,18 @@
             display: block;
             float: none;
             line-height: normal;
-            position: static;
+            position: relative;
             z-index: auto;
+            height: 450px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
         }
         .qfe_row {
-
-            margin: 0;
             color: #222222;
+            height:450px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            right: 260px;
         }
         .qfy-column{
             margin-left: 0;
@@ -165,12 +170,144 @@
             margin: 0;
             border-radius: 0;
             position: relative;
-            padding: 0;
+            padding-right: 25%;
+            padding-top: 5%;
             transition: all 0.3s ease 0s;
             box-sizing: border-box;
         }
         .span_jg{
             width: 40px;
+        }
+        .section-gd{
+            margin-bottom: 0;
+            border-radius: 0;
+            color: #222222;
+            padding: 20px 0 10vh;
+            margin-top: 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 4;
+            display: block;
+        }
+        .section-background{
+            background-color: #ffffff;
+            z-index: 2;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .section-container{
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 100px;
+            left: 170px;
+            display: flex;
+        }
+        .section-container2{
+            margin-left: 30px;
+            position: relative;
+            z-index: 3;
+            width: 20%;
+            height: 100px;
+        }
+        .section-row{
+            margin: 0;
+            background-color: rgb(3,61,117);
+            width: 125px;
+            height: 60px;
+            padding-top: 10px;
+            padding-left: 60px;
+        }
+        .section-row2{
+            margin-left: 150px;
+            width: 125px;
+            height: 60px;
+            background-color: rgb(3,61,117);
+            padding-top: 10px;
+            padding-left: 60px;
+        }
+        .section-row3{
+            margin-left: 150px;
+            width: 160px;
+            height: 60px;
+            background-color: rgb(3,61,117);
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+        .section-cloumn1{
+            z-index: 3;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: #222222;
+            width: 260px;
+        }
+        .section-cloumn2{
+            z-index: 3;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: #222222;
+            width: 260px;
+        }
+        .section-cloumn3{
+            z-index: 3;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: #222222;
+            width: 260px;
+        }
+        .t1{
+            text-align: left;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .t1-inner{
+            display: inline-block;
+            position: relative;
+            max-width: calc(100% - 64px);
+            vertical-align: middle !important;
+        }
+        .t1-inner-title{
+            font-family: 微软雅黑, serif;
+            font-size: 24px;
+            font-weight: normal;
+            font-style: normal;
+            color: #ffffff;
+            padding: 0 0 5px;
+            display: block;
+            vertical-align: bottom;
+            transition: all ease .6s;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .t2-inner-title{
+            font-family: 微软雅黑, serif;
+            font-size: 24px;
+            font-weight: normal;
+            font-style: normal;
+            color: #ffffff;
+            padding: 0 0 5px;
+            display: block;
+            vertical-align: bottom;
+            transition: all ease .6s;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .b{
+            position:relative;
+            bottom:0;
+            margin-left:-50px;/*div宽度的一半*/
+            left:50%;
         }
     </style>
 </head>
@@ -261,6 +398,38 @@
             </div>
         </div>
     </div>
+    <div class="section-gd">
+        <div class="section-background"></div>
+        <div class="section-container">
+            <div class="section-row">
+                <div class="section-cloumn1">
+                    <div class="t1-inner">
+                        <div class="t1-inner-title">
+                            <h1>诚信</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-row2">
+                <div class="section-cloumn2">
+                    <div class="t1-inner">
+                        <div class="t1-inner-title">
+                            <h1>敬业</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-row3">
+                <div class="section-cloumn3">
+                    <div class="t1-inner">
+                        <div class="t2-inner-title">
+                            <h2>感恩</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="login-footer">
     <div id="login-footer-box">
@@ -316,7 +485,10 @@
         </div>
     </div>
     <div id="footer-footer">
-        <%@include file="copyright.jsp"%>
+        <%
+            String copyright="&nbsp;All Copyright &copy;2020 普罗米修律师事务所";
+        %>
+        <%=copyright%>
     </div>
 </div>
 </body>

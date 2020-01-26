@@ -39,6 +39,7 @@
         </div>
     </div>
 </div>
+<div id="login-container"></div>
 <div id="login-footer">
     <div id="login-footer-box">
         <div id="login-footer-div1">
@@ -93,7 +94,10 @@
         </div>
     </div>
     <div id="footer-footer">
-        <%@include file="copyright.jsp"%>
+        <%
+            String copyright="&nbsp;All Copyright &copy;2020 普罗米修律师事务所";
+        %>
+        <%=copyright%>
     </div>
 </div>
 </body>

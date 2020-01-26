@@ -18,11 +18,12 @@ h2{
 	margin: 0 60px;
 }
 #login-container{
-	position: absolute;
+	position: relative;
 	top: 30%;
-	margin: 0;
-	width: 80%;
-	height: auto;
+	margin-top: 20%;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	width: 100%;
 }
 /*1703010225 林秋延 设计导航栏样式*/
 #login-nav{
@@ -198,12 +199,16 @@ h2{
 /*1703010225 林秋延 页脚*/
 #login-footer{
 	right: 0;
-	position: absolute;
-	top: 80%;
+	position: relative;
+	/*top: 80%;*/
+	/*bottom: 1px;*/
 	background-color:#353A40;
 	width: 100%;
 	min-width: 100%;
 	color: #979CA2;
+	margin-top: 10px;
+	padding-top: 10px;
+	height: 300px;
 }
 #login-footer-box{
 	height: 96%;
@@ -224,7 +229,12 @@ h2{
 	width: 30px;
 	height: 30px;
 }
-#login-footer-box,#login-footer-bottom{
+#login-footer-box{
+	width: 100%;
+	margin: 0 50px;
+	height: 80%;
+}
+#login-footer-bottom{
 	width: 100%;
 	margin: 0 50px;
 }
@@ -282,9 +292,11 @@ h2{
 }
 
 #footer-footer{
-	margin-top: 6%;
+	margin: 0;
+	padding: 0;
 	left: 50%;
 	height: 4%;
 	background-color:#353A40;
 	color: #979CA2;
+	text-align: center;
 }

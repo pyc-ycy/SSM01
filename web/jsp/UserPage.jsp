@@ -39,7 +39,8 @@
             </ul>
         </div>
     </div>
-
+</div>
+<div id="login-container">
     <center>
         <form name="form" method="post" action="${pageContext.request.contextPath}/userController/updateUser">
             <c:forEach items="${list}" var="list">
@@ -88,14 +89,12 @@
                     </tr>
                 </table>
             </c:forEach>
-
         </form>
     </center>
     <form method="post" action="${pageContext.request.contextPath}/userController/userExit">
         <input type="submit" value="退出登录">
     </form>
 </div>
-<input type="button">
 <div id="login-footer">
     <div id="login-footer-box">
         <div id="login-footer-div1">
@@ -150,7 +149,10 @@
         </div>
     </div>
     <div id="footer-footer">
-        <%@include file="copyright.jsp"%>
+        <%
+            String copyright="&nbsp;All Copyright &copy;2020 普罗米修律师事务所";
+        %>
+        <%=copyright%>
     </div>
 </div>
 </body>
