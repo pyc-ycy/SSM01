@@ -72,7 +72,7 @@
             position: relative;
             width: 100%;
             height: 100%;
-            background: url("../img/lawyer.jpg");
+            /*background: url("../img/lawyer.jpg");*/
         }
         .xm_login_card_tab {
             height: 50px;
@@ -149,9 +149,7 @@
         </div>
     </div>
 </div>
-<div class="b">
-    <%@include file="copyright.jsp"%>
-</div>
+<%@include file="copyright.jsp"%>
 <script type="javascript">
     function toFirst(account,password) {
         location.href="checkUser?account="+account+"&password="+password;

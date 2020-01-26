@@ -1,0 +1,290 @@
+body{
+	font-family: 微软雅黑;
+	font-size: 18px;
+}
+h1,h2{
+	font-size: 30px;
+	font-weight: normal;
+}
+h3{
+	font-size: 25px;
+	font-weight: normal;
+	color:#979CA2;
+}
+h2{
+	padding-left: 40px;
+}
+#login-nav table{
+	margin: 0 60px;
+}
+#login-container{
+	position: absolute;
+	top: 30%;
+	margin: 0;
+	width: 80%;
+	height: auto;
+}
+/*1703010225 林秋延 设计导航栏样式*/
+#login-nav{
+	height: 50px;
+	width: 100%;
+	background: #353A40;
+}
+#login-nav table{
+	margin: 0 auto;
+}
+
+#login-nav td,#login-mininav p{
+	padding: 10px;
+
+}
+#login-nav table a{
+	color: #969B9F;
+}
+#login-nav a:hover{
+	color: #fff;
+}
+.login-nav-span{
+	margin-left: -10px;
+}
+#login-td-ul li{
+	display: block;
+}
+#login-td-ul a{
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+#login-nav #login-td-ul a:hover{
+	color: #000;
+}
+#login-nav #login-td-ul a{
+	color: #000;
+}
+#login-nav #login-td-ul li:hover{
+	background-color: #eee;
+}
+.login-td{
+	position: relative;
+}
+#login-td-ul{
+	position: absolute;
+	left: 6px;
+	top:30px;
+	border:1px solid #000;
+	padding: 0;
+	background-color: gray;
+}
+/*1703010225 林秋延 内容样式*/
+/*1703010225 林秋延 小导航栏样式*/
+#login-mininav{
+	background-color:#eee;
+	height: 50px;
+}
+#login-mininav a{
+	color: #5FA1F5;
+}
+#login-mininav p{
+	color:#9CA1A7;
+}
+/*1703010225 林秋延 登录h1字体设置*/
+#login-h1{
+	border-bottom: 2px #E1E2E4 solid;
+}
+
+/*1703010225 林秋延 登录信息*/
+/*1703010225 林秋延 左边信息*/
+#login-left-information{
+	width: 450px;
+	padding:0 10px;
+	float: left;
+	margin-right:50px;
+}
+/*1703010225 林秋延 用户名*/
+.login-left-user{
+	width: 100%;
+
+}
+.login-left-input{
+	border: #ced4da 1px solid;
+	height: 40px;
+}
+.login-left-user input{
+	width: 100%;
+	line-height: 30px;
+}
+/*1703010225 林秋延 选择框*/
+#login-left-choose p{
+	display: inline-block;
+}
+/*1703010225 林秋延 文字*/
+#login-left-word a{
+	color: #5FA1F5;
+}
+#login-left-word p{
+	color:#9CA1A7;
+}
+/*1703010225 林秋延 登录按钮*/
+#login-left-post{
+	margin-top: 20px;
+}
+#login-left-button{
+	height: 40px;
+	width: 60px;
+	color: #fff;
+	background: #007AFF;
+}
+#login-left-button:hover{
+	background-color: #0069d9;
+}
+/*1703010225 林秋延 右边登录方法*/
+
+#login-right-information{
+	width: 350px;
+	float: left;
+	margin-left:50px;
+}
+#login-right-information li{
+	display: inline-block;
+	width: 100%;
+
+}
+/*1703010225 林秋延 列表样式设置*/
+#login-right-information a{
+	padding-left:10px;
+}
+#login-right-information li{
+	margin: 12px 0;
+}
+/*1703010225 林秋延 li1*/
+#login-right-li1{
+	background-color:#007BFF;
+}
+#login-right-li1:hover{
+	background-color: #0069D9;
+}
+#login-right-a1{
+	color: #fff;
+}
+/*1703010225 林秋延 li2*/
+#login-right-li2{
+	background-color: #FEC107;
+
+}
+#login-right-li2:hover{
+	background-color: #E0A800;
+}
+#login-right-a2{
+	color: #000;
+}
+/*1703010225 林秋延 li3*/
+#login-right-li3{
+	background-color: #6C757D;
+}
+#login-right-li3:hover{
+	background-color: #5A6268;
+}
+.login-right-pic{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+/*1703010225 林秋延 文字*/
+#login-right-ol li{
+	margin: 5px 0;
+	font-size: 16px;
+}
+/*1703010225 林秋延 页脚*/
+#login-footer{
+	right: 0;
+	position: absolute;
+	top: 80%;
+	background-color:#353A40;
+	width: 100%;
+	min-width: 100%;
+	color: #979CA2;
+}
+#login-footer-box{
+	height: 96%;
+	padding-top: 10px;
+	display: flex;
+}
+#login-footer-box li{
+	margin: 5px 0;
+
+}
+#login-footer-box a{
+	color: #979CA2;
+}
+#login-footer-box a:hover{
+	color: #C2C4C5;
+}
+.login-footer-pic{
+	width: 30px;
+	height: 30px;
+}
+#login-footer-box,#login-footer-bottom{
+	width: 100%;
+	margin: 0 50px;
+}
+#login-footer-div1{
+	margin-left: 12%;
+	width: 25%;
+	margin-right: 40px;
+}
+#login-footer-div2{
+	margin-left: 5%;
+	width: 25%;
+}
+#login-footer-div3{
+	margin-left: 5%;
+	margin-right: 12%;
+	width: 50%;
+}
+.login-footer-div,.login-footer-second{
+	margin: 0 40px;
+}
+.login-footer-second ul{
+	padding-left: 0px;
+}
+.login-footer-second li{
+	list-style: none;
+
+}
+.login-footer-second dd{
+	margin-left: 0px;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+#login-footer-hr{
+	border-bottom: 1px #000 solid;
+}
+#login-footer-bottom a{
+	color: #979CA2;
+}
+#login-footer-bottom a:hover{
+	color: #C2C4C5;
+}
+.login-footer-span1{
+	margin-right: auto;
+}
+.login-footer-span2{
+	margin-left:auto;
+	display: inline;
+}
+#login-footer-spanall{
+	display: flex;
+}
+
+#footer-footer{
+	margin-top: 6%;
+	left: 50%;
+	height: 4%;
+	background-color:#353A40;
+	color: #979CA2;
+}
