@@ -13,303 +13,7 @@
     <title>普罗米修律师事务所</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/head.css" type="text/css">
-    <style type="text/css">
-        .row{
-            box-sizing: content-box;
-            display: block;
-            float: none;
-            line-height: normal;
-            position: relative;
-            z-index: auto;
-            height: 450px;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-        }
-        .qfe_row {
-            color: #222222;
-            height:450px;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            right: 260px;
-        }
-        .qfy-column{
-            margin-left: 0;
-            width: 50%;
-            position: relative;
-            min-height: 1px;
-            padding-left: 5px;
-            padding-right: 5px;
-            float: left;
-            max-width: 100%;
-            box-sizing: border-box;
-            color: #222222;
-            -webkit-text-size-adjust: none;
-            font-size: 14px;
-            word-spacing: normal;
-            font-family: "微软雅黑",Helvetica,Arial,Verdana,sans-serif;
-            font-style: normal;
-            font-weight: normal;
-        }
-        .column-inner{
-            margin: 0 4vw 0 0;
-            border-radius: 0;
-            position: relative;
-            padding: 0;
-            transition: all 0.3s ease 0s;
-            box-sizing: border-box;
-        }
-        .background-img{
-            position: relative;
-            max-width: 100%;
-            word-wrap: break-word;
-            box-sizing: border-box;
-            text-align: left;
-        }
-        .img{
-            vertical-align: middle;
-            max-width: 100%;
-            width: auto;
-            height: auto;
-            box-sizing: border-box;
-            border: 0;
-            word-wrap: break-word;
-            float: right;
-        }
-        .wz{
-            z-index: 3;
-            position: relative;
-            box-sizing: border-box;
-        }
-        .wz-title{
-            position: relative;
-            background-repeat: no-repeat;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 0 0 2px;
-            box-sizing: border-box;
-        }
-        .qfe-wrapper{
-            margin-bottom: 0;
-            word-wrap: break-word;
-            box-sizing: border-box;
-        }
-        .qfy-title{
-            margin-bottom: 0;
-            text-shadow: none;
-            text-align: left;
-            box-sizing: border-box;
-        }
-        .qfy_title_inner{
-            display: inline-block;
-            position: relative;
-            max-width: 100%;
-            transition: all ease .6s;
-            box-sizing: border-box;
-        }
-        .header_title{
-            font-size: 30px;
-            font-weight: normal;
-            font-style: normal;
-            color: #222222;
-            transition: all ease .6s;
-            box-sizing: border-box;
-        }
-        .inner_abs{
-            overflow: hidden;
-            border-bottom-style: solid;
-            width: 40px;
-            max-width: 40px;
-            border-bottom-width: 4px;
-            border-bottom-color: #26cdff;
-            right: auto;
-            top: 0;
-            position: relative;
-            transition: all ease .6s;
-            display: inline-block;
-            float: none;
-            height: 1px;
-            margin: 0 auto;
-        }
-        .qfy_element{
-            position: relative;
-            line-height: 1.5em;
-            background-position: left top;
-            background-repeat: no-repeat;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 10px 0 0;
-            border-radius: 0;
-            min-height: 1px;
-            box-sizing: border-box;
-        }
-        .qfy_text{
-            position: relative;
-
-            line-height: 1.5em;
-
-            background-position: left top;
-            background-repeat: no-repeat;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 17px 0 0;
-            border-radius: 0;
-            min-height: 1px;
-            box-sizing: border-box;
-        }
-        .qfyanimate{
-            position: relative;
-            min-height: 1px;
-            padding-left: 5px;
-            padding-right: 5px;
-            float: right;
-            max-width: 100%;
-            animation-fill-mode: backwards;
-            box-sizing: border-box;
-        }
-        .text_inner{
-            margin: 0;
-            border-radius: 0;
-            position: relative;
-            padding-right: 25%;
-            padding-top: 5%;
-            transition: all 0.3s ease 0s;
-            box-sizing: border-box;
-        }
-        .span_jg{
-            width: 40px;
-        }
-        .section-gd{
-            margin-bottom: 0;
-            border-radius: 0;
-            color: #222222;
-            padding: 20px 0 10vh;
-            margin-top: 0;
-            overflow: hidden;
-            position: relative;
-            z-index: 4;
-            display: block;
-        }
-        .section-background{
-            background-color: #ffffff;
-            z-index: 2;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-        .section-container{
-            margin: 0;
-            position: relative;
-            z-index: 3;
-            width: 100%;
-            height: 100px;
-            left: 170px;
-            display: flex;
-        }
-        .section-container2{
-            margin-left: 30px;
-            position: relative;
-            z-index: 3;
-            width: 20%;
-            height: 100px;
-        }
-        .section-row{
-            margin: 0;
-            background-color: rgb(3,61,117);
-            width: 125px;
-            height: 60px;
-            padding-top: 10px;
-            padding-left: 60px;
-        }
-        .section-row2{
-            margin-left: 150px;
-            width: 125px;
-            height: 60px;
-            background-color: rgb(3,61,117);
-            padding-top: 10px;
-            padding-left: 60px;
-        }
-        .section-row3{
-            margin-left: 150px;
-            width: 160px;
-            height: 60px;
-            background-color: rgb(3,61,117);
-            padding-top: 10px;
-            padding-left: 20px;
-        }
-        .section-cloumn1{
-            z-index: 3;
-            position: relative;
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            color: #222222;
-            width: 260px;
-        }
-        .section-cloumn2{
-            z-index: 3;
-            position: relative;
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            color: #222222;
-            width: 260px;
-        }
-        .section-cloumn3{
-            z-index: 3;
-            position: relative;
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            color: #222222;
-            width: 260px;
-        }
-        .t1{
-            text-align: left;
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        .t1-inner{
-            display: inline-block;
-            position: relative;
-            max-width: calc(100% - 64px);
-            vertical-align: middle !important;
-        }
-        .t1-inner-title{
-            font-family: 微软雅黑, serif;
-            font-size: 24px;
-            font-weight: normal;
-            font-style: normal;
-            color: #ffffff;
-            padding: 0 0 5px;
-            display: block;
-            vertical-align: bottom;
-            transition: all ease .6s;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        .t2-inner-title{
-            font-family: 微软雅黑, serif;
-            font-size: 24px;
-            font-weight: normal;
-            font-style: normal;
-            color: #ffffff;
-            padding: 0 0 5px;
-            display: block;
-            vertical-align: bottom;
-            transition: all ease .6s;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        .b{
-            position:relative;
-            bottom:0;
-            margin-left:-50px;/*div宽度的一半*/
-            left:50%;
-        }
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/first.css" type="text/css">
 </head>
 <body>
 <%--导航栏--%>
@@ -424,6 +128,63 @@
                     <div class="t1-inner">
                         <div class="t2-inner-title">
                             <h2>感恩</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-row4">
+                <div class="section-column4">
+                    <div class="t1-inner">
+                        <div class="t1-inner-title">
+                            <h2>贡献</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <h2>主要服务内容</h2>
+        <center>
+            <span class="inner_abs"></span>
+        </center>
+        <div class="section2-container">
+            <div class="section2-container-content">
+                <div class="section2-container-content-row">
+                    <div class="section2-container-content-row-block1">
+                        <div class="SCCRB1-inner">
+                            <div class="SCCRB1-inner-container">
+                                <div class="SCCRB1-inner-container-title">
+                                    <div class="wrapper">
+                                        <p style="letter-spacing: 2px;text-align: center">
+                                            <span style="font-size: 20px">
+                                                <strong>
+                                                    <span style="color: rgb(0,0,0);">
+                                                        金融银行类法律业务
+                                                    </span>
+                                                </strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="SCCRB1-inner-container-context">
+                                    <div class="wrapper">
+                                        <div style="text-align: center;">
+                                            <span style="font-size: 14px;">
+                                                1、银行贷前尽职调查业务。根据银行的委托，核查债务人及担保人的年检信息，
+                                                以及是否注销、吊销、清算破产的信息；核查银行授信案件的法律程序状态并进行分析
+                                                （强制执行的工作进程、状态，已查封的财产及未处置资产的情况与结果分析）；
+                                                核查债务人的经营情况。
+                                                2、个人贷款类非诉讼催收业务。接受银行委托，对其个人贷款类逾期客户通过电话、上门等多种方式，
+                                                积极与逾期借款人沟通并施加压力，提高其还款意愿，促使其还款，以实现逾期贷款的顺利回收。
+                                                3、个人贷款类、公司类不良贷款诉讼/仲裁业务。接受银行委托，
+                                                针对个贷类、公司类违约客户，
+                                                通过诉讼/仲裁、财产保全、申请强制执行等法律途径向债务人/担保人追索不良贷款。
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
